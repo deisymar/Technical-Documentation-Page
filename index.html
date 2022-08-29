@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>   
+<nav id="navbar">
+  <header> Guía de Aprendizaje Python</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduccion">Introduccion</a></li>
+    <li><a class="nav-link" href="#Abriendo_el_Apetito">Abriendo el Apetito</a></li>
+    <li><a class="nav-link" href="#Invocando_al_Interprete">Invocando al Interprete</a></li>
+    <li><a class="nav-link" href="#Usando_Python_como_una_calculadora">Usando Python como una calculadora</a></li>
+    <li><a class="nav-link" href="#Primeros_pasos_hacia_la_programacion">Primeros pasos hacia la programacion</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduccion">
+    <header>Introduccion</header>
+    <article>
+    <p>Python es un lenguaje de programación potente y fácil de aprender. Tiene estructuras de datos de alto nivel eficientes y un simple pero efectivo sistema de programación orientado a objetos. La elegante sintaxis de Python y su tipado dinámico, junto a su naturaleza interpretada lo convierten en un lenguaje ideal para scripting y desarrollo rápido de aplicaciones en muchas áreas, para la mayoría de plataformas.</p>
+    <p>El intérprete de Python y la extensa librería estándar se encuentran disponibles libremente en código fuente y de forma binaria para la mayoría de las plataformas desde la Web de Python, https://www.python.org/, y se pueden distribuir libremente. El mismo sitio también contiene distribuciones y referencias a muchos módulos libres de Python de terceros, programas, herramientas y documentación adicional.</p>
+    <p>Este tutorial introduce al lector informalmente a los conceptos básicos y las funcionalidades del lenguaje de programación Python y a su sistema. Ayuda a tener un interprete de Python accesible para una experiencia práctica, todos los ejemplos son auto-contenidos, permitiendo utilizar el tutorial sin conexión.</p>
+    </article>
+  </section>
+  <section class="main-section" id="Abriendo_el_Apetito">
+    <header>Abriendo el Apetito</header>
+    <article>
+    <p>Python es fácil de utilizar siendo un lenguaje de programación real ofreciendo mucha más estructura y soporte para programas grandes que la que ofrecen shell scripts o ficheros batch. Por otro lado, Python también ofrece mayor comprobación de errores que C y siendo un lenguaje de muy alto nivel tiene tipos de datos de alto nivel incorporados como listas flexibles y diccionarios. Debido a sus tipos de datos más generales, Python es aplicable a más dominios que Awk o Perl, aunque hay muchas cosas que son tan sencillas en Python como en esos lenguajes.</p>
+    <p>Python es un lenguaje interpretado, lo cual puede ahorrarte mucho tiempo durante el desarrollo ya que no es necesario compilar ni enlazar. El intérprete puede usarse interactivamente, lo que facilita experimentar con características del lenguaje, escribir programas desechables o probar funciones cuando se hace desarrollo de programas de abajo hacia arriba. Es también una calculadora de escritorio práctica.</p>
+    <p>Python permite escribir programas compactos y legibles. Los programas en Python son típicamente más cortos que sus programas equivalentes en C, C++ o Java por varios motivos:</p>
+    <ul>
+      <li>los tipos de datos de alto nivel permiten expresar operaciones complejas en una sola instrucción;</li>
+        <li>la agrupación de instrucciones se hace mediante indentación en vez de llaves de apertura y cierre;</li>
+        <li>no es necesario declarar variables ni argumentos.</li>
+    </ul>
+    </article>
+  </section>
+  <section class="main-section" id="Invocando_al_Interprete">
+    <header>Invocando al Interprete</header>
+    <article>
+      El intérprete de Python generalmente se instala como /usr/local/bin/python3.10 en aquellas máquinas donde está disponible; poner /usr/local/bin en la ruta de búsqueda de su shell de Unix hace posible iniciarlo escribiendo el comando:
+      <code>python3.10</code>
+      en el terminal [1]. Ya que la elección del directorio dónde vivirá el intérprete es una opción del proceso de instalación, puede estar en otros lugares; consulta a tu experto Python local o administrador de sistemas. (Por ejemplo, /usr/local/python es una alternativa popular).
+      <p>En máquinas con Windows en las que haya instalado Python desde Microsoft Store, el comando python3.10 estará disponible. Si tiene el lanzador py.exe instalado, puede usar el comando py. Consulte Excurso: configurar variables de entorno para conocer otras formas de iniciar Python.</p>
+
+<p>Se puede salir del intérprete con estado de salida cero ingresando el carácter de fin de archivo (Control-D en Unix, Control-Z en Windows). Si eso no funciona, puedes salir del intérprete escribiendo el comando: quit().</p>
+    </article>
+  </section>
+  <section class="main-section" id="Usando_Python_como_una_calculadora">
+    <header>Usando Python como una calculadora</header>
+    <article>
+    <p>Probemos algunos comandos simples de Python. Inicia el intérprete y espere el prompt primario,
+    <code><span> >>> </span></code>
+. (No debería tardar mucho.) 
+    </p>
+    <h3>Números</h3>
+    <p>El intérprete puede utilizarse como una simple calculadora; puedes introducir una expresión y este escribirá los valores. La sintaxis es sencilla: los operadores +, -, * y /``funcionan como en la mayoría de los lenguajes (por ejemplo, Pascal o C); los paréntesis (``()) pueden ser usados para agrupar. Por ejemplo:
+      <code>>>> 2 + 2
+4
+>>> 50 - 5*6
+20
+>>> (50 - 5*6) / 4
+5.0
+>>> 8 / 5  # division always returns a floating point number
+1.6</code>
+    </p>
+    <p>Los números enteros (ej. 2, 4, 20) tienen tipo int, los que tienen una parte fraccionaria (por ejemplo 5.0, 1.6) tiene el tipo float. Vamos a ver más acerca de los tipos numéricos más adelante en el tutorial.</p>
+    <h3>Cadenas de caracteres</h3>
+    <p>Además de números, Python puede manipular cadenas de texto, las cuales pueden ser expresadas de distintas formas. Pueden estar encerradas en comillas simples ('...') o dobles ("...") con el mismo resultado 2. \ puede ser usado para escapar comillas:
+      <code>>>> 'spam eggs'  # single quotes
+'spam eggs'
+>>> 'doesn\'t'  # use \' to escape the single quote...
+"doesn't"
+>>> "doesn't"  # ...or use double quotes instead
+"doesn't"
+>>> '"Yes," they said.'
+'"Yes," they said.'
+>>> "\"Yes,\" they said."
+'"Yes," they said.'
+>>> '"Isn\'t," they said.'
+'"Isn\'t," they said.'</code>
+    </p>
+    <p>En el intérprete interactivo, la salida de caracteres está encerrada en comillas y los caracteres especiales se escapan con barras invertidas. Aunque esto a veces se vea diferente de la entrada (las comillas que encierran pueden cambiar), las dos cadenas son equivalentes. La cadena se encierra en comillas dobles si la cadena contiene una comilla simple y ninguna doble, de lo contrario es encerrada en comillas simples. La función print() produce una salida más legible, omitiendo las comillas que la encierran e imprimiendo caracteres especiales y escapados:
+      <code>>>> print('C:\some\name')  # here \n means newline!
+C:\some
+ame
+>>> print(r'C:\some\name')  # note the r before the quote
+C:\some\name
+      </code>
+    </p>
+    <h3>Listas</h3>
+    <p>Python tiene varios tipos de datos compuestos, utilizados para agrupar otros valores. El más versátil es la lista, la cual puede ser escrita como una lista de valores separados por coma (ítems) entre corchetes. Las listas pueden contener ítems de diferentes tipos, pero usualmente los ítems son del mismo tipo.<code>>>> squares = [1, 4, 9, 16, 25]
+>>> squares
+[1, 4, 9, 16, 25]
+      </code>
+    </p>
+    <p>
+      Al igual que las cadenas (y todas las demás tipos integrados sequence), las listas se pueden indexar y segmentar:
+      <code>>>> squares[0]  # indexing returns the item
+1
+>>> squares[-1]
+25
+>>> squares[-3:]  # slicing returns a new list
+[9, 16, 25]
+</code>
+    </p>
+    </article>
+  </section>
+  <section class="main-section" id="Primeros_pasos_hacia_la_programacion">
+    <header>Primeros pasos hacia la programacion</header>
+    <article>
+<p>Por supuesto, podemos usar Python para tareas más complicadas que sumar dos y dos. Por ejemplo, podemos escribir una parte inicial de la serie de Fibonacci así:
+<code>>>> # Fibonacci series:
+... # the sum of two elements defines the next
+... a, b = 0, 1
+>>> while a < 10:
+...     print(a)
+...     a, b = b, a+b
+...
+0
+1
+1
+2
+3
+5
+8
+</code>
+</p>
+<p>Este ejemplo introduce varias características nuevas.</p>
+<ul>
+  <li>La primera línea contiene una asignación múltiple: las variables a y b obtienen simultáneamente los nuevos valores 0 y 1. En la última línea esto se usa nuevamente, demostrando que las expresiones de la derecha son evaluadas primero antes de que se realice cualquiera de las asignaciones. Las expresiones del lado derecho se evalúan de izquierda a derecha.    
+  </li>
+  <li>El bucle while se ejecuta mientras la condición (aquí: a < 10) sea verdadera. En Python, como en C, cualquier valor entero que no sea cero es verdadero; cero es falso. La condición también puede ser una cadena de texto o una lista, de hecho, cualquier secuencia; cualquier cosa con una longitud distinta de cero es verdadera, las secuencias vacías son falsas. La prueba utilizada en el ejemplo es una comparación simple. Los operadores de comparación estándar se escriben igual que en C: < (menor que), > (mayor que), == (igual a), <= (menor que o igual a), >= (mayor que o igual a) y != (distinto a).
+  </li>
+  <li>El cuerpo del bucle está indentado: la indentación es la forma que usa Python para agrupar declaraciones. En el intérprete interactivo debes teclear un tabulador o espacio(s) para cada línea indentada. En la práctica vas a preparar entradas más complicadas para Python con un editor de texto; todos los editores de texto modernos tienen la facilidad de agregar la indentación automáticamente. Cuando se ingresa una instrucción compuesta de forma interactiva, se debe finalizar con una línea en blanco para indicar que está completa (ya que el analizador no puede adivinar cuando tecleaste la última línea). Nota que cada línea de un bloque básico debe estar sangrada de la misma forma.
+</li>
+  <li>La función print() escribe el valor de los argumentos que se le dan. Difiere de simplemente escribir la expresión que se quiere mostrar (como hicimos antes en los ejemplos de la calculadora) en la forma en que maneja múltiples argumentos, cantidades de punto flotante y cadenas. Las cadenas de texto son impresas sin comillas y un espacio en blanco se inserta entre los elementos, así puedes formatear cosas de una forma agradable: 
+    <code>>>> i = 256*256
+>>> print('The value of i is', i)
+The value of i is 65536
+</code> 
+<p>El parámetro nombrado end puede usarse para evitar el salto de linea al final de la salida, o terminar la salida con una cadena diferente:
+  <code> >>> a, b = 0, 1
+>>> while a < 1000:
+...     print(a, end=',')
+...     a, b = b, a+b
+...
+0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,
+</code>
+  </p>  
+  </li>  
+</ul>
+    </article>
+  </section>
+</main>
+</body>
+</html>
